@@ -30,3 +30,18 @@ export const userInfo = async(_,res)=>{
         res.status(404).json({msg:"user not fount"})
     }
 }
+
+export const userParams = async(req,res)=>{
+    
+    try {
+        userInformation.push(req.params)
+        res.status(201).json({
+            msg:"create Params successfully",
+            user: userInformation  
+        })
+    } catch (error) {
+       res.status(500).json({
+        msg:"No Params Created"
+       })   
+    }
+}
