@@ -14,13 +14,13 @@ export const createData = async (req, res) => {
     const checkEmail = await crudModel.findOne({ email });
 
     if (checkEmail) {
-      res.status(409).json({ mgs: "Email Already Exist" });
+     return res.status(409).json({ mgs: "Email Already Exist" });
     }
 
     const checkMobile = await crudModel.findOne({mobile})
 
     if (checkMobile) {
-      res.status(409).json({ mgs: "Mobile Number Already Exist" });
+      return res.status(409).json({ mgs: "Mobile Number Already Exist" });
     }
 
     const userData = await crudModel.create({ name, email, city, mobile })

@@ -1,11 +1,6 @@
 
-const App = () => {
-  return (
-    <>
-    
-    
-    </>
-  )
-}
+import UserTable from "./components/userTable";
 
-export default App
+const App = () => <UserTable />;
+
+export default App;
