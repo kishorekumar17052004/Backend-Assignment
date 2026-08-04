@@ -11,14 +11,14 @@ const userApi = axios.create({
   },
 });
 
-// GET /api/users
+//* GET /api/users
 export const getUsers = async () => {
   const response = await userApi.get("/info");
 
   return response.data;
 };
 
-// POST /api/users
+//* POST /api/users
 export const createUser = async (userData) => {
   const response = await userApi.post("/create", userData);
 
