@@ -13,7 +13,7 @@ const StudentSchema = new mongoose.Schema(
       trim: true,
       unique: true,
       lowercase: true,
-      alias: "studentemail",
+     
     },
     studentage: {
       type: Number,
